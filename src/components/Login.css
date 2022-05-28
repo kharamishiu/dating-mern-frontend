@@ -1,0 +1,31 @@
+.Login{
+    background-color: rgb(203, 241, 191);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.Login__container{
+    background-color: white;
+    padding: 5rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75); 
+}
+.Login__container  img{
+    object-fit: contain;
+    height: 120px;
+    margin-bottom: 2rem;
+}
+.Login__container  button{
+    font-weight: 700;
+    text-transform: inherit;
+    margin-top: 1rem;
+    color: white;
+    background-color: #0a8d48;
+    padding: .5rem 1rem;
+}
+.Login__container button:hover{
+    color: #0a8d48;
+    background-color: rgba(0, 0, 0, 0.1);
+}
