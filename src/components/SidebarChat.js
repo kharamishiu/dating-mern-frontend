@@ -7,7 +7,7 @@ const SidebarChat = ({ messages }) => {
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 500))
     }, [])
-    console.log(messages)
+ 
     return (
         <div className='SidebarChat'>
             <Avatar src={`https://joeschmoe.io/api/v1/female/${seed}`} />

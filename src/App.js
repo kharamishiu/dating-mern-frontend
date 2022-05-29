@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   const [messages, setMessage] = useState([]);
   const [{ user }, dispatch] = useStateValue();
-  console.log(user)
+  
 
   useEffect(() => {
     Axios.get('/messages/sync')
@@ -28,6 +28,7 @@ function App() {
     const channel = pusher.subscribe('canal-01');
     channel.bind('inserted', (data) => {
       setMessage([...messages, data])
+      //alert(JSON.stringify(data))
     });
     return () => {
       channel.unbind_all();

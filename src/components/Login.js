@@ -22,7 +22,7 @@ const Login = () => {
                 const token = credential.accessToken;
                 // The signed-in user info.
                 //const user = result.user;
-                console.log(typeof(result));
+                //console.log(typeof(result));
             })
             .catch((error) => { // Handle Errors here.
                 const errorCode = error.code;
@@ -32,7 +32,7 @@ const Login = () => {
                 // The AuthCredential type that was used.
                 const credential = GoogleAuthProvider.credentialFromError(error);
 
-                console.log(`Hemos tenido un error ${errorMessage} - ${errorCode} - ${credential}`);
+                //console.log(`Hemos tenido un error ${errorMessage} - ${errorCode} - ${credential}`);
             })
     }
 

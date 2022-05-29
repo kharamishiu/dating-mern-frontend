@@ -5,6 +5,7 @@ import { AttachFile, MoreVert, SearchOutlined, InsertEmoticon } from '@material-
 import { Axios } from './Axios';
 import { v4 as uuidv4, v4 } from 'uuid';
 import { useStateValue } from './StateProvider';
+//import { maxLongLetters } from '../utils/utils.js';
 import './Chat.css';
 
 const Chat = ({ msgs }) => {
@@ -38,6 +39,7 @@ const Chat = ({ msgs }) => {
     /*para formatear la fecha y hora
      {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
     */
+
     return (
         <div className='Chat'>
             <div className='Chat__header'>
@@ -62,7 +64,7 @@ const Chat = ({ msgs }) => {
                 {msgs.map(message => (
                     <p key={message.id} className={`Chat__message ${message.name == user.action.displayName && 'Chat__receiver'}`}>
                         <span className='Chat__name'>{message.name}</span>
-                        {message.message}
+                        <p>{message.message}</p>
                         <span className='Chat__timestamp'>
                             {message.timestamp}
                         </span>
