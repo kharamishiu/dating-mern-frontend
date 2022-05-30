@@ -40,13 +40,19 @@ const Chat = ({ msgs }) => {
      {new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
     */
 
+    //console.log(msgs.length)
     return (
         <div className='Chat'>
             <div className='Chat__header'>
                 <Avatar src={`https://joeschmoe.io/api/v1/female/${seed}`} />
                 <div className='Chat__headerInfo'>
                     <h3>Name</h3>
-                    <p>{msgs[msgs.length - 1].timestamp}</p>
+
+                    {msgs.length > 0 ?
+                        <p>{msgs[msgs.length - 1].timestamp}</p>
+                        :
+                        <p>no data</p>
+                    }
                 </div>
                 <div className='Chat__headerRight'>
                     <IconButton>
@@ -61,7 +67,9 @@ const Chat = ({ msgs }) => {
                 </div>
             </div>
             <div className='Chat__body'>
-                {msgs.map(message => (
+                {msgs.length > 0 ?
+
+                    msgs.map(message => (
                     <p key={message.id} className={`Chat__message ${message.name == user.action.displayName && 'Chat__receiver'}`}>
                         <span className='Chat__name'>{message.name}</span>
                         <p>{message.message}</p>
@@ -70,7 +78,9 @@ const Chat = ({ msgs }) => {
                         </span>
                     </p>
 
-                ))}
+                    )) :
+                    <p>dont messages</p>
+                }
 
 
             </div>

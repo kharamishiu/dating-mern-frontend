@@ -13,7 +13,13 @@ const SidebarChat = ({ messages }) => {
             <Avatar src={`https://joeschmoe.io/api/v1/female/${seed}`} />
             <div className='SidebarChat__info'>
                 <h2>Name</h2>
+                {messages.length > 0 ?
                 <p>{messages[messages.length - 1].timestamp}</p>
+                    :
+                    <p>no data</p>
+                }
+
+
             </div>
         </div>
     )

@@ -77,7 +77,7 @@
 .Chat__footer{
     display: flex;
     justify-content: space-between;
-    height: 3.5rem;
+    height: 4.5rem;
     align-items: center;
     border-top: 1px solid lightgray;
 }
